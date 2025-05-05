@@ -13,3 +13,6 @@ input_text ="hello, how are you doing?"
 
 inputs = tokenizer.encode_plus(history_string, input_text, return_tensors="pt")
 print(inputs)
+
+outputs = model.generate(**inputs)
+print(outputs)
